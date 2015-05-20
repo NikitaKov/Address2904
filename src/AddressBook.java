@@ -14,5 +14,15 @@ public class AddressBook {
             System.out.println(list[i]);
         }
     }
-    
+
+    void delete(int index){
+        for (int i = index; i<count;i++)
+            list [i-1] = list [i];
+        list[count-1]=null;
+        count--;
+    }
+
+    void edit (int index, String name, String phone, String email){
+        list [index-1] = new Address(name, phone,email);
+    }
 }

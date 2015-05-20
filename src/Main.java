@@ -35,11 +35,23 @@ public class Main {
                     book1.printAll ();
                     break;
                 case 4:
+                    System.out.println("Введите номер записи");
+                    int indexdlete=s.nextInt ();
+                    book1.delete(indexdlete);
                     break;
                 case 5:
+                    System.out.println("Введите номер записи для изменения:");
+                    int indexedit=s.nextInt ();
+                    System.out.println("Введите имя новой записи");
+                    String nameedit=s.next ();
+                    System.out.println("Введите телефон");
+                    String phoneedit=s.next ();
+                    System.out.println("Введите адресс электронной почты");
+                    String emailedit=s.next ();
+                    book1.edit(indexedit, nameedit, phoneedit, emailedit);
                     break;
                 case 6:
-                    break;
+                    return;
                 default:
                     break;
             }
